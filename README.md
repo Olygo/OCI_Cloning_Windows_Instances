@@ -14,7 +14,7 @@ Key objective:
 
 ![01](./video.png))
 
-## 1. Cloning Domain-Joined Windows instances
+## 1. Cloning Domain-Joined Windows instances
 
 ### 1.1 Prepare the source instance with Sysprep:
 
@@ -23,7 +23,7 @@ Key objective:
 - Create an unattend.xml file to automate Sysprep operations and post installation tasks
 - Create a SetupComplete.cmd script to perform post installation tasks
 
-### 1.2 Sysprep unattend.xml
+### 1.2 Sysprep unattend.xml
 
 This step is ***MANDATORY*** Without it, the instance will enter the OOBE (Out-of-Box Experience) at first boot, during which ***RDP is not enabled***.
 
@@ -92,7 +92,7 @@ This file must be copied in ***C:\Windows\System32\Sysprep\***
 </unattend>
 ```
 
-### 1.3 Sysprep unattend.xml
+### 1.3 Sysprep unattend.xml
 
 By using a [SetupComplete.cmd](./SetupComplete.cmd) script you can perform post installation tasks such as enabling RDP.
 
@@ -120,7 +120,7 @@ REM === Log for debug ===
 echo RDP enabled successfully > C:\rdp-setup.log
 ```
 
-### 1.4 Run Sysprep
+### 1.4 Run Sysprep
 
 Open an administrator prompt: 
 
@@ -130,7 +130,7 @@ C:\Windows\System32\Sysprep\sysprep.exe /generalize /oobe /shutdown /unattend:C:
 
 The instance shuts down automatically and is ready for cloning.
 
-### 1.5 Clone instance
+### 1.5 Clone instance
 
 - Once Sysprep has stopped the Operating System, you must "Force Stop" the instance from OCI.
 - Clone the boot volume of the instance or 
