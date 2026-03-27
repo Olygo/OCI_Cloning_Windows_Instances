@@ -92,7 +92,7 @@ This file must be copied in ***C:\Windows\System32\Sysprep\***
 </unattend>
 ```
 
-### 1.3 Sysprep unattend.xml
+### 1.3 SetupComplete.cmd script
 
 By using a [SetupComplete.cmd](./SetupComplete.cmd) script you can perform post installation tasks such as enabling RDP.
 
