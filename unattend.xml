@@ -21,6 +21,20 @@
     </component>
   </settings>
 
+  <!-- generalize -->
+  <settings pass="generalize">
+    <component name="Microsoft-Windows-PnpSysprep"
+               processorArchitecture="amd64"
+               publicKeyToken="31bf3856ad364e35"
+               language="neutral"
+               versionScope="nonSxS">
+
+      <PersistAllDeviceInstalls>true</PersistAllDeviceInstalls>
+      <DoNotCleanUpNonPresentDevices>true</DoNotCleanUpNonPresentDevices>
+
+    </component>
+  </settings>
+
   <!-- specialize -->
   <settings pass="specialize">
     <component name="Microsoft-Windows-Shell-Setup"
@@ -52,7 +66,8 @@
         <SkipUserOOBE>true</SkipUserOOBE>
         <ProtectYourPC>3</ProtectYourPC>
       </OOBE>
-      
+
     </component>
   </settings>
+
 </unattend>
