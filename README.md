@@ -35,6 +35,7 @@ This file must be copied in ***C:\Windows\System32\Sysprep\***
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
+<!-- This file must be copied in :  C:\Windows\System32\Sysprep\ -->
 <unattend xmlns="urn:schemas-microsoft-com:unattend"
           xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -53,6 +54,20 @@ This file must be copied in ***C:\Windows\System32\Sysprep\***
       <SystemLocale>en-US</SystemLocale>
       <UILanguage>en-US</UILanguage>
       <UserLocale>en-US</UserLocale>
+    </component>
+  </settings>
+
+  <!-- generalize -->
+  <settings pass="generalize">
+    <component name="Microsoft-Windows-PnpSysprep"
+               processorArchitecture="amd64"
+               publicKeyToken="31bf3856ad364e35"
+               language="neutral"
+               versionScope="nonSxS">
+
+      <PersistAllDeviceInstalls>true</PersistAllDeviceInstalls>
+      <DoNotCleanUpNonPresentDevices>true</DoNotCleanUpNonPresentDevices>
+
     </component>
   </settings>
 
@@ -87,8 +102,10 @@ This file must be copied in ***C:\Windows\System32\Sysprep\***
         <SkipUserOOBE>true</SkipUserOOBE>
         <ProtectYourPC>3</ProtectYourPC>
       </OOBE>
+
     </component>
   </settings>
+
 </unattend>
 ```
 
