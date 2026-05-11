@@ -125,7 +125,7 @@ echo RDP enabled successfully > C:\rdp-setup.log
 Open an administrator prompt: 
 
 ```
-C:\Windows\System32\Sysprep\sysprep.exe /generalize /oobe /shutdown /unattend:C:\Windows\System32\Sysprep\unattend.xml
+C:\Windows\System32\Sysprep\sysprep.exe /generalize /oobe /shutdown /mode:vm /unattend:C:\Windows\System32\Sysprep\unattend.xml
 ```
 
 The instance shuts down automatically and is ready for cloning.
